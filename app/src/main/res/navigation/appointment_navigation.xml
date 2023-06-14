@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/appointment_navigation"
+    app:startDestination="@id/appointmentListingFragment">
+
+    <fragment
+        android:id="@+id/appointmentListingFragment"
+        android:name="com.mycompany.hospitalapp.ui.appointment.AppointmentListingFragment"
+        android:label="AppointmentListingFragment" >
+        <action
+            android:id="@+id/action_appointmentListingFragment_to_doctorRoleListing"
+            app:destination="@id/doctorRoleListing" />
+        <action
+            android:id="@+id/action_appointmentListingFragment_to_appointmentHistory"
+            app:destination="@id/appointmentHistory" />
+        <action
+            android:id="@+id/action_appointmentListingFragment_to_callListingFragment2"
+            app:destination="@id/callListingFragment2" />
+        <action
+            android:id="@+id/action_appointmentListingFragment_to_accountFragment2"
+            app:destination="@id/accountFragment2" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/doctorNameListing"
+        android:name="com.mycompany.hospitalapp2.ui.doctor.DoctorNameListing"
+        android:label="fragment_doctor_name_listing"
+        tools:layout="@layout/fragment_doctor_name_listing" >
+        <action
+            android:id="@+id/action_doctorNameListing_to_appointmentDateFragment"
+            app:destination="@id/appointmentDateFragment" />
+        <action
+            android:id="@+id/action_doctorNameListing_to_appointmentListingFragment"
+            app:destination="@id/appointmentListingFragment" />
+        <action
+            android:id="@+id/action_doctorNameListing_to_appointmentConfirm"
+            app:destination="@id/appointmentConfirm" />
+    </fragment>
+    <fragment
+        android:id="@+id/appointmentDateFragment"
+        android:name="com.mycompany.hospitalapp2.ui.appointment.AppointmentDateFragment"
+        android:label="fragment_appointment_date"
+        tools:layout="@layout/fragment_appointment_date" >
+        <action
+            android:id="@+id/action_appointmentDateFragment_to_appointmentConfirm"
+            app:destination="@id/appointmentConfirm" />
+        <action
+            android:id="@+id/action_appointmentDateFragment_to_appointmentListingFragment"
+            app:destination="@id/appointmentListingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/appointmentConfirm"
+        android:name="com.mycompany.hospitalapp2.ui.appointment.AppointmentConfirm"
+        android:label="fragment_appointment_confirm"
+        tools:layout="@layout/fragment_appointment_confirm" >
+        <action
+            android:id="@+id/action_appointmentConfirm_to_appointmentListingFragment"
+            app:destination="@id/appointmentListingFragment" />
+        <action
+            android:id="@+id/action_appointmentConfirm_to_appointmentHistory"
+            app:destination="@id/appointmentHistory" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/doctorRoleListing"
+        android:name="com.mycompany.hospitalapp2.ui.doctor.DoctorRoleListing"
+        android:label="fragment_doctor_role_listing"
+        tools:layout="@layout/fragment_doctor_role_listing" >
+        <action
+            android:id="@+id/action_doctorRoleListing_to_doctorNameListing"
+            app:destination="@id/doctorNameListing" />
+        <action
+            android:id="@+id/action_doctorRoleListing_to_appointmentListingFragment"
+            app:destination="@id/appointmentListingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/appointmentHistory"
+        android:name="com.mycompany.hospitalapp2.ui.appointment.AppointmentHistory"
+        android:label="fragment_appointment_history"
+        tools:layout="@layout/fragment_appointment_history" >
+        <action
+            android:id="@+id/action_appointmentHistory_to_appointmentListingFragment"
+            app:destination="@id/appointmentListingFragment" />
+        <action
+            android:id="@+id/action_appointmentHistory_to_appointmentHistoryDetail"
+            app:destination="@id/appointmentHistoryDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/callListingFragment2"
+        android:name="com.mycompany.hospitalapp.ui.call.CallListingFragment"
+        android:label="CallListingFragment" >
+        <action
+            android:id="@+id/action_callListingFragment2_to_accountFragment2"
+            app:destination="@id/accountFragment2" />
+        <action
+            android:id="@+id/action_callListingFragment2_to_appointmentListingFragment"
+            app:destination="@id/appointmentListingFragment" />
+        <action
+            android:id="@+id/action_callListingFragment2_to_callDetailFragment"
+            app:destination="@id/callDetailFragment" />
+        <action
+            android:id="@+id/action_callListingFragment2_to_callHistory"
+            app:destination="@id/callHistory" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountFragment2"
+        android:name="com.mycompany.hospitalapp2.ui.account.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_accountFragment2_to_callListingFragment2"
+            app:destination="@id/callListingFragment2" />
+        <action
+            android:id="@+id/action_accountFragment2_to_appointmentListingFragment"
+            app:destination="@id/appointmentListingFragment" />
+        <action
+            android:id="@+id/action_accountFragment2_to_LoginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/callDetailFragment"
+        android:name="com.mycompany.hospitalapp.ui.call.CallDetailFragment"
+        android:label="CallDetailFragment" >
+        <action
+            android:id="@+id/action_callDetailFragment_to_callServiceListingFragment"
+            app:destination="@id/callServiceListingFragment" />
+        <action
+            android:id="@+id/action_callDetailFragment_to_callListingFragment2"
+            app:destination="@id/callListingFragment2" />
+        <action
+            android:id="@+id/action_callDetailFragment_to_callHistory"
+            app:destination="@id/callHistory" />
+    </fragment>
+    <fragment
+        android:id="@+id/callServiceListingFragment"
+        android:name="com.mycompany.hospitalapp2.ui.call.CallServiceListingFragment"
+        android:label="CallServiceListingFragment" >
+        <action
+            android:id="@+id/action_callServiceListingFragment_to_callDetailFragment"
+            app:destination="@id/callDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/callHistory"
+        android:name="com.mycompany.hospitalapp2.ui.call.CallHistory"
+        android:label="fragment_call_history"
+        tools:layout="@layout/fragment_call_history" >
+        <action
+            android:id="@+id/action_callHistory_to_callListingFragment2"
+            app:destination="@id/callListingFragment2" />
+        <action
+            android:id="@+id/action_callHistory_to_callHistoryDetail"
+            app:destination="@id/callHistoryDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/callHistoryDetail"
+        android:name="com.mycompany.hospitalapp2.ui.call.CallHistoryDetail"
+        android:label="fragment_call_history_detail"
+        tools:layout="@layout/fragment_call_history_detail" />
+    <fragment
+        android:id="@+id/appointmentHistoryDetail"
+        android:name="com.mycompany.hospitalapp2.ui.appointment.AppointmentHistoryDetail"
+        android:label="fragment_appointment_history_detail"
+        tools:layout="@layout/fragment_appointment_history_detail" />
+</navigation>

@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">HospitalApp2</string>
+
+    <string-array name="Doctors">
+        <item>Участковый</item>
+        <item>Хирург</item>
+        <item>Офтальмолог</item>
+    </string-array>
+    <string-array name="Services">
+        <item>Выберите услугу</item>
+        <item>Вакцинация</item>
+        <item>Сдача крови</item>
+    </string-array>
+    <string-array name="CallDate">
+        <item>Выберите дату приема</item>
+        <item>сегодня, 13 июня</item>
+        <item>завтра, 14 июня</item>
+
+    </string-array>
+    <string-array name="Reasons">
+        <item>Выберите услугу</item>
+        <item>Прием (осмотр, консультация) врача-терапевта на дому</item>
+        <item>Прием (осмотр, консультация) врача-травматолога-ортопеда на дому</item>
+        <item>Оказание медпомощи на дому средним медперсоналом</item>
+        <item>Определение РНК вируса SARS CoV-2 методом ПЦР с типированием генетических вариантов, включая Омикрон (назофарингеальный мазок)</item>
+        <item>Взятие образца биологического материал </item>
+        <item>Взятие крови из пальца</item>
+        <item>Измерение артериального давления</item>
+    </string-array>
+
+    <string name="enter_email">Введите почту</string>
+    <string name="enter_name">Введите ФИО пользователя</string>
+    <string name="enter_phone">Введите номер телефона</string>
+    <string name="invalid_phone">Неправильный ввод номера телефона</string>
+    <string name="invalid_email">Неправильный ввод почты</string>
+    <string name="enter_password">Введите пароль</string>
+    <string name="invalid_password">Пароль должен содержать как минимум 6 символов</string>
+    <string name="not_matching_passwords">Пароли не совпадают</string>
+    <string name="appointments">Записи</string>
+    <string name="calls">Вызовы</string>
+    <string name="account">Личный кабинет</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

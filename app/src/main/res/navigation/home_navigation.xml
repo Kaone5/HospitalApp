@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_navigation"
+    app:startDestination="@id/appointmentDetailFragment">
+
+
+    <fragment
+        android:id="@+id/appointmentListingFragment"
+        android:name="com.mycompany.hospitalapp.ui.appointment.AppointmentListingFragment"
+        android:label="AppointmentListingFragment" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.mycompany.hospitalapp2.ui.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+    <action
+        android:id="@+id/action_homeFragment_to_loginFragment"
+        app:destination="@id/loginFragment"
+        app:popUpTo="@id/loginFragment"
+        app:popUpToInclusive="true" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_appointmentListingFragment_to_appointmentDetailFragment"
+        app:destination="@id/appointmentDetailFragment" />
+
+    <fragment
+        android:id="@+id/appointmentDetailFragment"
+        android:name="com.mycompany.hospitalapp.ui.appointment.AppointmentDetailFragment"
+        android:label="AppointmentDetailFragment"
+        tools:layout="@layout/fragment_appointment_detail"/>
+</navigation>
